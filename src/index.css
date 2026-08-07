@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Atkinson Hyperlegible", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: "Crimson Pro", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --color-primary: oklch(0.5413 0.2466 293.01);
+  --color-on-primary: oklch(1.0 0 0);
+  --color-secondary: oklch(0.6056 0.2189 292.72);
+  --color-accent: oklch(0.596 0.1274 163.23);
+  --color-background: oklch(0.9768 0.0142 308.3);
+  --color-foreground: oklch(0.2077 0.0398 265.75);
+  --color-muted: oklch(0.9701 0.0139 304.14);
+  --color-muted-foreground: oklch(0.556 0.041 301.88);
+  --color-border: oklch(0.9404 0.0293 303.08);
+  --color-destructive: oklch(0.5771 0.2152 27.33);
+  --color-ring: oklch(0.5413 0.2466 293.01);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Dark mode overrides — applied via JS class on <html> */
+html.dark {
+  --color-background: oklch(0.141 0.022 286.3);
+  --color-foreground: oklch(0.951 0.015 286.3);
+  --color-muted: oklch(0.221 0.026 286.3);
+  --color-muted-foreground: oklch(0.656 0.041 286.3);
+  --color-border: oklch(0.331 0.033 286.3);
+}
+
+/* Smooth theme transition */
+html.dark-transitioning,
+html.dark-transitioning *,
+html.dark-transitioning *::before,
+html.dark-transitioning *::after {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
