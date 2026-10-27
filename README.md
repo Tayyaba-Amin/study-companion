@@ -7,7 +7,7 @@ An AI-powered learning platform that transforms PDF study materials into interac
 ## Live Demo
 
 🔗 Live Application: https://1she9e228l1sm80nbubgkk670.nativelyai.app/
-
+🔗 Demo Video: https://drive.google.com/file/d/1nQmsD7ZiHvWfnlpbCnFE4uLyzOInUX01/view?usp=drive_link
 ---
 
 ##  Features
